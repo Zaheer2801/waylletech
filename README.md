@@ -19,6 +19,14 @@ Welcome to the official front-end repository for **WAYLLE TECH**, a premium 45-d
 
 ---
 
+## 🎥 Preview
+
+<div align="center">
+  <img src="./public/preview.webp" alt="WAYLLE TECH Preview Animation" width="100%">
+</div>
+
+---
+
 ## ✨ Features
 
 - **Cinematic Apple-Inspired UI**: Built completely from scratch using pure CSS and React. Features glassmorphism, dynamic gradients, sticky scroll behaviors, and responsive grid structures.
