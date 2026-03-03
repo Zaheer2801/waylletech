@@ -1,0 +1,86 @@
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-description {
+    font-size: 1.35rem;
+    /* Slightly larger, more readable */
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    color: var(--text-secondary);
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-8 {
+    margin-bottom: 3rem;
+}
+
+.btn-large {
+    padding: 0.8rem 2rem;
+    font-size: 1.125rem;
+}
+
+.explore-btn {
+    animation: applePulse 3s ease-in-out infinite;
+}
+
+@keyframes applePulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.explore-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(41, 151, 255, 0.3);
+}
+
+.glass-shine-text {
+    display: inline;
+    background: linear-gradient(120deg,
+            var(--accent-primary) 0%,
+            var(--accent-primary) 40%,
+            #ffffff 50%,
+            var(--accent-primary) 60%,
+            var(--accent-primary) 100%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shineTextLoop 3s linear infinite;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(41, 151, 255, 0.2);
+}
+
+@keyframes shineTextLoop {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
+}

@@ -1,0 +1,168 @@
+.schedule-section {
+    position: relative;
+    background-color: var(--bg-secondary);
+    overflow: hidden;
+}
+
+.section-header {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-header p {
+    max-width: 600px;
+}
+
+/* Timeline specific styles */
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-light);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50%;
+    position: relative;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.timeline-item.right {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 50%;
+}
+
+.timeline-content {
+    width: 90%;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.timeline-item.left .timeline-content {
+    margin-right: 2rem;
+}
+
+.timeline-item.right .timeline-content {
+    margin-left: 2rem;
+}
+
+/* Badge styles */
+.timeline-badge {
+    position: absolute;
+    top: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 4px var(--bg-secondary);
+    z-index: 3;
+}
+
+.timeline-item.left .timeline-badge {
+    right: -2rem;
+    transform: translateX(50%);
+}
+
+.timeline-item.right .timeline-badge {
+    left: -2rem;
+    transform: translateX(-50%);
+}
+
+.schedule-icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.timeline-badge.learning {
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+}
+
+.timeline-badge.break {
+    background: linear-gradient(135deg, #64748B, #475569);
+}
+
+.timeline-badge.practice {
+    background: linear-gradient(135deg, #10B981, #059669);
+}
+
+.timeline-badge.practice-heavy {
+    background: var(--accent-gradient);
+    box-shadow: var(--accent-glow);
+}
+
+.timeline-badge.test {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+}
+
+.timeline-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--accent-tertiary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.timeline-content h3 {
+    margin-bottom: 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 24px;
+    }
+
+    .timeline-item {
+        justify-content: flex-start;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .timeline-item.right {
+        padding-left: 0;
+    }
+
+    .timeline-content {
+        width: calc(100% - 64px);
+        margin-left: 64px !important;
+        margin-right: 0 !important;
+    }
+
+    .timeline-item.left .timeline-badge,
+    .timeline-item.right .timeline-badge {
+        left: 24px;
+        right: auto;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "Day 1": {
+    "topic": "HTML5 Semantic Structure, Forms, Accessibility",
+    "content": "HTML Introduction ❮ Previous Next ❯ HTML is the standard markup language for creating Web pages. What is HTML? HTML stands for Hyper Text Markup Language HTML is the standard markup language for creating Web pages HTML describes the structure of a Web page HTML consists of a series of elements HTML elements tell the browser how to display the content HTML elements label pieces of content such as \"this is a heading\", \"this is a paragraph\", \"this is a link\", etc. A Simple HTML Document Example <!D..."
+  },
+  "Day 2": {
+    "topic": "CSS Fundamentals: Box Model, Selectors, Specificity",
+    "content": "CSS Introduction ❮ Previous Next ❯ What is CSS? CSS is the language we use to style a Web page. CSS stands for Cascading Style Sheets CSS describes how HTML elements are to be displayed on screen, paper, or in other media CSS saves a lot of work. It can control the layout of multiple web pages all at once External stylesheets are stored in CSS files CSS Demo - One HTML Page - Multiple Styles! Here we will show one HTML page displayed with four different stylesheets. Click on the \"Stylesheet 1\", ..."
+  },
+  "Day 3": {
+    "topic": "CSS Layout: Flexbox Complete Guide",
+    "content": "CSS Flexbox ❮ Previous Next ❯ CSS Flexbox (Flexible Box Layout) CSS Flexbox is short for the CSS Flexible Box Layout module. Flexbox is a layout model for arranging items (horizontally or vertically) within a container, in a flexible and responsive way. Flexbox makes it easy to design a flexible and responsive layout, without using float or positioning. Item 1 Item 2 Item 3 Item 4 Item 5 Try it Yourself » Flexbox vs. Grid CSS Flexbox is used for a one-dimensional layout, with rows OR columns. CS..."
+  },
+  "Day 4": {
+    "topic": "CSS Grid Layout System",
+    "content": "CSS Grid Layout ❮ Previous Next ❯ CSS Grid Layout Module The Grid Layout Module offers a grid-based layout system, with rows and columns. The Grid Layout Module allows developers to easily create complex web layouts. The Grid Layout Module makes it easy to design a responsive layout structure, without using float or positioning. My Header Link 1Link 2Link 3 Lorem IpsumLorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget ..."
+  },
+  "Day 11": {
+    "topic": "JS Basics: Variables, Data Types, Operators",
+    "content": "JavaScript Introduction ❮ Previous Next ❯ What Can JavaScript Do? JavaScript is the programming language of the web. It can calculate, manipulate and validate data. It can update and change both HTML and CSS. JavaScript Can Change HTML Content One of many JavaScript HTML methods is getElementById(). The example below \"finds\" an HTML element (with id=\"demo\"), and changes the element content (innerHTML) to \"Hello JavaScript\": Example document.getElementById(\"demo\").innerHTML = \"Hello JavaScript\"; ..."
+  },
+  "Day 14": {
+    "topic": "Arrays: Methods, Iteration, Manipulation",
+    "content": "JavaScript Arrays ❮ Previous Next ❯ Example const cars = [\"Saab\", \"Volvo\", \"BMW\"]; Try it Yourself » An Array is an object type designed for storing data collections. Key characteristics of JavaScript arrays are: Elements: An array is a list of values, known as elements. Ordered: Array elements are ordered based on their index. Zero indexed: The first element is at index 0, the second at index 1, and so on. Dynamic size: Arrays can grow or shrink as elements are added or removed. Heterogeneous: ..."
+  },
+  "Day 21": {
+    "topic": "React Intro: JSX, Components, Props",
+    "content": "React Introduction ❮ Previous Next ❯ What is React? React is a front-end JavaScript library. React was developed by the Facebook Software Engineer Jordan Walke. React is also known as React.js or ReactJS. React is a tool for building UI components. How does React Work? React creates a VIRTUAL DOM in memory. Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM. React on..."
+  },
+  "Day 41": {
+    "topic": "Node.js & Express: Setup, Routing, Middleware",
+    "content": "Node.js Introduction ❮ Previous Next ❯ What You'll Learn In this tutorial, you'll learn: How to install and run Node.js Core concepts like modules and the event loop How to build web servers and APIs Working with databases and files Deploying Node.js applications What is Node.js? Node.js is a free, open-source JavaScript runtime that runs on Windows, Mac, Linux, and more. It lets you execute JavaScript code outside of a web browser, enabling server-side development with JavaScript. Built on Chro..."
+  }
+}

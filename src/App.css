@@ -1,0 +1,140 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide scrollbar during intro so page doesnt jump */
+body:has(.intro-container:not(.fade-bg)) {
+  overflow: hidden;
+}
+
+.main-layout {
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-layout.visible {
+  opacity: 1;
+}
+
+.fade-in-section {
+  animation: appleFadeIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes appleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  flex: 1;
+}
+
+/* Hero Section - Apple Minimalist */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 5rem;
+  background-color: var(--bg-primary);
+  /* True black */
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero-subtitle {
+  color: var(--accent-primary);
+  /* Use Apple blue for subtitle */
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  color: var(--text-secondary);
+  font-size: 1.35rem;
+  /* readable */
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  max-width: 650px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  opacity: 0;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+/* Footer */
+.footer-section {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 4rem 0 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.footer-bottom {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.8rem;
+  font-weight: 400;
+}

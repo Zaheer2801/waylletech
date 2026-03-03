@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Apple-inspired Dark Theme Palette */
+  --bg-primary: #000000;
+  /* True black background */
+  --bg-secondary: #1d1d1f;
+  /* Apple standard dark grey */
+  --bg-tertiary: #2c2c2e;
+  /* Slightly lighter grey */
+
+  --text-primary: #f5f5f7;
+  /* Apple almost-white text */
+  --text-secondary: #86868b;
+  /* Apple standard grey text */
+  --text-tertiary: #a1a1a6;
+  /* Lighter grey text */
+
+  --accent-primary: #2997ff;
+  /* Apple Blue */
+  --accent-secondary: #0071e3;
+  /* Apple Blue Darker */
+  --accent-tertiary: #f5f5f7;
+  /* White accent for contrast */
+  /* Remove harsh neon gradients, use subtle clean gradients if needed */
+  --accent-gradient: linear-gradient(135deg, #2997ff, #0071e3);
+  --accent-glow: 0 4px 14px rgba(41, 151, 255, 0.2);
+
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-light: rgba(255, 255, 255, 0.05);
+
+  --glass-bg: rgba(29, 29, 31, 0.7);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(20px);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+  /* Apple loves pill buttons */
+
+  --transition-fast: 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-normal: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-display: var(--font-family-base);
+}
+
+/* Light Mode Overrides */
+[data-theme='light'] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --bg-tertiary: #e5e5ea;
+
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --text-tertiary: #a1a1a6;
+
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-light: rgba(0, 0, 0, 0.05);
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Global Light Mode Adjustments for Hardcoded Opacities */
+[data-theme='light'] .glass-card,
+[data-theme='light'] .project-card,
+[data-theme='light'] .instructor-card,
+[data-theme='light'] .feature-card,
+[data-theme='light'] .syllabus-day-header,
+[data-theme='light'] .curriculum-week,
+[data-theme='light'] .newsletter-form,
+[data-theme='light'] .instructor-background {
+  background: rgba(0, 0, 0, 0.02) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme='light'] .tech-badge {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: var(--text-secondary) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme='light'] .btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme='light'] .newsletter-input::placeholder {
+  color: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.47059;
+  letter-spacing: -0.022em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Typography Classes - Apple Scaling */
+.heading-xl {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.heading-lg {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.heading-md {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.heading-sm {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 500;
+}
+
+.text-gradient {
+  background: var(--text-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient.blue {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  /* Apple uses slightly narrower constrained max-widths */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+}
+
+/* Buttons - Apple Pill Style */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  transition: all var(--transition-fast);
+}
+
+.btn-large {
+  padding: 0.8rem 1.8rem;
+  font-size: 1.125rem;
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  background: #ffffff;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-blue {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.btn-blue:hover {
+  background: var(--accent-secondary);
+}
+
+/* Layout spacing */
+.section-padding {
+  padding: 8rem 0;
+  /* Apple likes massive breathing room */
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
